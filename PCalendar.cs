@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Coollacs.PublicClasses
 {
     public class PCalendar
     {
+        /// <summary>
+        /// Return Persian Current Date
+        /// </summary>
         public static string PersianDate()
         {
             PersianCalendar PCalendar = new PersianCalendar();
@@ -20,6 +20,9 @@ namespace Coollacs.PublicClasses
             return NewDate;
         }
         //-----------------------------------------------------------------------------
+        /// <summary>
+        /// Return Persian Yesterday Date
+        /// </summary>
         public static string PersianYesterday()
         {
             PersianCalendar PCalendar = new PersianCalendar();
@@ -32,6 +35,9 @@ namespace Coollacs.PublicClasses
             return NewDate;
         }
         //-----------------------------------------------------------------------------
+        /// <summary>
+        /// Return Persian Current Month of Year
+        /// </summary>
         public static int PersianMonthOfYear()
         {
             PersianCalendar PCalendar = new PersianCalendar();
@@ -41,6 +47,9 @@ namespace Coollacs.PublicClasses
             return Month;
         }
         //-----------------------------------------------------------------------------
+        /// <summary>
+        /// Convert Persian Date to Gregorian Date
+        /// </summary>
         public static DateTime Persian2Gregorian(string PersianDate)
         {
             int Year, Month, Day, Hour, Min, Sec;
@@ -66,6 +75,10 @@ namespace Coollacs.PublicClasses
             DateTime greDate = new DateTime(Year, Month, Day, Hour, Min, Sec, PCalendar);
             return greDate;
         }
+
+        /// <summary>
+        /// Convert Gregorian Date to Persian Date
+        /// </summary>
         public static DateTime Gregorian2Persian(DateTime GregorianDate)
         {
             PersianCalendar PCalendar = new PersianCalendar();
@@ -80,6 +93,9 @@ namespace Coollacs.PublicClasses
             return prDate;
         }
         //-----------------------------------------------------------------------------
+        /// <summary>
+        /// Return Current Time Only
+        /// </summary>
         public static string Time()
         {
             return DateTime.Now.ToString("HH:mm");
